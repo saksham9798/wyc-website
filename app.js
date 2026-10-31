@@ -35,7 +35,7 @@ function createImagePreview(imageUrl, altText, className) {
   function showPlaceholder() {
     const message = document.createElement('p');
     message.className = 'image-placeholder';
-    message.textContent = 'Add image URLs in app.js';
+    message.textContent = 'No image available';
     preview.replaceChildren(message);
   }
 
@@ -256,7 +256,7 @@ $('checkoutForm').addEventListener('submit', event => {
   event.preventDefault();
   if (!cart.length || !currentUser()) return;
 
-  alert(`Thanks ${currentUser().name}! Your order of ₹${$('total').textContent} is placed (demo).`);
+  alert(`Thanks ${currentUser().name}! Your order of ₹${$('total').textContent} is placed successfully.`);
   cart = [];
   saveCart();
   $('deliveryAddress').value = '';
