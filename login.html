@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Sign in or create a WYC demo account.">
+<title>Login – WYC</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="authpage">
+<div class="authbox">
+  <a class="logo" href="index.html">WYC<span>wear your choice</span></a>
+  <div class="tabs">
+    <button class="chip on" type="button" data-t="login" aria-pressed="true">Login</button>
+    <button class="chip" type="button" data-t="signup" aria-pressed="false">Create account</button>
+  </div>
+  <form id="loginForm" autocomplete="on">
+    <label class="field-label" for="lEmail">Email</label>
+    <input type="email" id="lEmail" autocomplete="email" required>
+    <label class="field-label" for="lPass">Password</label>
+    <input type="password" id="lPass" autocomplete="current-password" required>
+    <button class="btn full">Login</button>
+  </form>
+  <form id="signupForm" autocomplete="on" hidden>
+    <label class="field-label" for="sName">Your name</label>
+    <input type="text" id="sName" autocomplete="name" required>
+    <label class="field-label" for="sEmail">Email</label>
+    <input type="email" id="sEmail" autocomplete="email" required>
+    <label class="field-label" for="sPass">Password (minimum 6 characters)</label>
+    <input type="password" id="sPass" autocomplete="new-password" minlength="6" required>
+    <button class="btn full">Create account</button>
+  </form>
+  <p id="msg" class="msg" role="status" aria-live="polite"></p>
+  <p class="note">Demo only: accounts and passwords are stored in this browser. Do not use a real password.</p>
+</div>
+<script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Shop WYC garments and have them delivered to your address.">
+<title>WYC – Wear Your Choice</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="index.html">WYC<span>wear your choice</span></a>
+  <nav aria-label="Main navigation">
+    <a href="#shop">Shop</a>
+    <a id="authLink" href="login.html">Login</a>
+    <button id="cartBtn" class="btn ghost" type="button">Cart (<span id="cartCount" aria-live="polite">0</span>)</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Pick &<br>Wear your choice.</h1>
+  <p>Choose a garment, select your size, and add it to your cart.</p>
+  <a class="btn" href="#shop">Shop garments</a>
+</section>
+
+<main id="shop">
+  <div class="bar">
+    <h2>Choose a garment</h2>
+    <div class="filters">
+      <button class="chip on" type="button" data-f="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-f="tee" aria-pressed="false">T-Shirts</button>
+      <button class="chip" type="button" data-f="full" aria-pressed="false">Full sleeve</button>
+      <button class="chip" type="button" data-f="jeans" aria-pressed="false">Jeans</button>
+    </div>
+  </div>
+  <div id="grid" class="grid"></div>
+</main>
+
+<!-- Cart -->
+<aside id="cart" class="drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
+  <div class="dh"><h3 id="cartTitle">Your cart</h3><button class="x" id="closeCart" type="button" aria-label="Close cart">×</button></div>
+  <div id="cartItems"></div>
+  <form id="checkoutForm" class="checkout-form" hidden>
+    <label for="deliveryAddress">Delivery address</label>
+    <textarea id="deliveryAddress" name="deliveryAddress" rows="4" maxlength="300" autocomplete="street-address" placeholder="House/flat, street, city, state, PIN code" required></textarea>
+    <button class="btn full" type="submit">Place order</button>
+    <button class="btn ghost full" type="reset">Back to cart</button>
+  </form>
+  <div class="df"><strong>Total: ₹<span id="total">0</span></strong><button class="btn" id="checkout" type="button">Checkout</button></div>
+</aside>
+
+<footer>© 2026 WYC – Wear Your Choice</footer>
+<script src="auth.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
