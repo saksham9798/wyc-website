@@ -1,56 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Shop WYC garments and have them delivered to your address.">
-<title>WYC – Wear Your Choice</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shop considered everyday clothing at WYC. Find your next favourite tee, shirt, or pair of jeans.">
+  <title>WYC — Wear Your Choice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="top">
-  <a class="logo" href="index.html">WYC<span>wear your choice</span></a>
-  <nav aria-label="Main navigation">
-    <a href="#shop">Shop</a>
-    <a id="authLink" href="login.html">Login</a>
-    <button id="cartBtn" class="btn ghost" type="button">Cart (<span id="cartCount" aria-live="polite">0</span>)</button>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>Pick &<br>Wear your choice.</h1>
-  <p>Choose a garment, select your size, and add it to your cart.</p>
-  <a class="btn" href="#shop">Shop garments</a>
-</section>
-
-<main id="shop">
-  <div class="bar">
-    <h2>Choose a garment</h2>
-    <div class="filters">
-      <button class="chip on" type="button" data-f="all" aria-pressed="true">All</button>
-      <button class="chip" type="button" data-f="tee" aria-pressed="false">T-Shirts</button>
-      <button class="chip" type="button" data-f="full" aria-pressed="false">Full sleeve</button>
-      <button class="chip" type="button" data-f="jeans" aria-pressed="false">Jeans</button>
-    </div>
+  <div class="announcement">
+    <span>THE EVERYDAY EDIT</span>
+    <span>Save up to 35% on selected styles</span>
+    <a href="#shop">Shop the edit <span aria-hidden="true">→</span></a>
   </div>
-  <div id="grid" class="grid"></div>
-</main>
 
-<!-- Cart -->
-<aside id="cart" class="drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
-  <div class="dh"><h3 id="cartTitle">Your cart</h3><button class="x" id="closeCart" type="button" aria-label="Close cart">×</button></div>
-  <div id="cartItems"></div>
-  <form id="checkoutForm" class="checkout-form" hidden>
-    <label for="deliveryAddress">Delivery address</label>
-    <textarea id="deliveryAddress" name="deliveryAddress" rows="4" maxlength="300" autocomplete="street-address" placeholder="House/flat, street, city, state, PIN code" required></textarea>
-    <button class="btn full" type="submit">Place order</button>
-    <button class="btn ghost full" type="reset">Back to cart</button>
-  </form>
-  <div class="df"><strong>Total: ₹<span id="total">0</span></strong><button class="btn" id="checkout" type="button">Checkout</button></div>
-</aside>
+  <header class="top">
+    <a class="logo" href="index.html" aria-label="WYC home">wyc<span>WEAR YOUR CHOICE</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#shop">Shop</a>
+      <a href="#offers">Offers</a>
+      <a id="authLink" href="login.html">Login</a>
+      <button id="cartBtn" class="cart-button" type="button" aria-label="Open shopping cart">
+        Bag <span id="cartCount" aria-live="polite">0</span>
+      </button>
+    </nav>
+  </header>
 
-<footer>© 2026 WYC – Wear Your Choice</footer>
-<script src="auth.js"></script>
-<script src="app.js"></script>
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> MADE FOR THE EVERYDAY</p>
+        <h1 id="heroTitle">Good clothes.<br><em>Good days.</em></h1>
+        <p class="hero-description">Easy pieces, considered details, and the kind of comfort you reach for on repeat.</p>
+        <a class="btn hero-cta" href="#shop">Find your fit <span aria-hidden="true">↗</span></a>
+        <p class="hero-note">Fresh looks, better prices. That’s your WYC.</p>
+      </div>
+      <div class="hero-visual">
+        <img
+          src="https://rukminim2.flixcart.com/image/1420/1420/xif0q/t-shirt/m/s/a/m-et-ss-zephyr-black-blackberrys-original-imahq7c7fgnhcgff.jpeg?q=90"
+          alt="Black polo from the WYC everyday edit"
+          fetchpriority="high"
+        >
+        <div class="hero-sticker"><span>THE</span><strong>daily<br>uniform</strong><span>ISSUE NO. 01</span></div>
+        <div class="hero-caption"><span>01 / THE POLO</span><span>Easy by design.</span></div>
+      </div>
+      <div class="hero-index" aria-hidden="true">WYC&nbsp; / &nbsp;001</div>
+    </section>
+
+    <section class="benefits" aria-label="Shopping benefits">
+      <div><span class="benefit-icon">✳</span><span>Thoughtful everyday style</span></div>
+      <div><span class="benefit-icon">↗</span><span>Offers on selected pieces</span></div>
+      <div><span class="benefit-icon">◇</span><span>Find your fit, your way</span></div>
+    </section>
+
+    <section id="offers" class="offer-panel" aria-labelledby="offerTitle">
+      <div class="offer-mark">WYC<br><span>STUDIO</span></div>
+      <div class="offer-copy">
+        <p class="eyebrow">A LITTLE SOMETHING EXTRA</p>
+        <h2 id="offerTitle">Your next favourite,<br>for a little less.</h2>
+        <p>Explore marked-down essentials across tees, shirts, and denim.</p>
+      </div>
+      <a class="offer-link" href="#shop">Explore offers <span aria-hidden="true">↗</span></a>
+      <span class="offer-decoration" aria-hidden="true">35%</span>
+    </section>
+
+    <section id="shop" class="shop-section" aria-labelledby="shopTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE WYC SELECTION</p>
+          <h2 id="shopTitle">Wear it on repeat.</h2>
+          <p class="section-intro">The dependable favourites. Pick a piece, choose your size, and make it yours.</p>
+        </div>
+        <span class="product-count"><span id="visibleCount">8</span> pieces to discover</span>
+      </div>
+      <div class="bar">
+        <div class="filters" role="group" aria-label="Filter products">
+          <button class="chip on" type="button" data-f="all" aria-pressed="true">Everything</button>
+          <button class="chip" type="button" data-f="tee" aria-pressed="false">T-shirts</button>
+          <button class="chip" type="button" data-f="full" aria-pressed="false">Shirts</button>
+          <button class="chip" type="button" data-f="jeans" aria-pressed="false">Denim</button>
+        </div>
+        <span class="sort-note">Good style, no guesswork.</span>
+      </div>
+      <div id="grid" class="grid"></div>
+    </section>
+
+    <section class="closing-note">
+      <span class="closing-star" aria-hidden="true">✳</span>
+      <p>Wear what feels like you.</p>
+      <a href="#shop">Back to the edit ↑</a>
+    </section>
+  </main>
+
+  <aside id="cart" class="drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
+    <div class="dh">
+      <div><p class="eyebrow">YOUR WYC EDIT</p><h2 id="cartTitle">Your bag <span id="cartCountTitle">0</span></h2></div>
+      <button class="x" id="closeCart" type="button" aria-label="Close shopping cart">×</button>
+    </div>
+    <div id="cartItems"></div>
+    <form id="checkoutForm" class="checkout-form" hidden>
+      <div class="checkout-heading">
+        <p class="eyebrow">ALMOST YOURS</p>
+        <h3>Where should we send it?</h3>
+        <p>Share your details for this order.</p>
+      </div>
+      <div class="form-grid">
+        <label for="customerName">Full name
+          <input id="customerName" name="name" type="text" autocomplete="name" placeholder="Your name" maxlength="80" required>
+        </label>
+        <label for="customerPhone">Contact number
+          <input id="customerPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+919876543210" pattern="\+?[0-9]{7,15}" title="Enter 7 to 15 digits, optionally starting with +." required>
+        </label>
+        <label class="form-wide" for="customerEmail">Email address
+          <input id="customerEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="120" required>
+        </label>
+        <label class="form-wide" for="deliveryAddress">Delivery address
+          <textarea id="deliveryAddress" name="address" rows="3" maxlength="300" autocomplete="street-address" placeholder="House/flat, street, city, state, PIN code" required></textarea>
+        </label>
+      </div>
+      <button class="btn full place-order" type="submit">Place your order <span aria-hidden="true">↗</span></button>
+      <button class="back-to-bag" type="reset">← Back to your bag</button>
+    </form>
+    <div class="cart-bottom">
+      <div class="cart-summary">
+        <div><span>Subtotal</span><span id="subtotal">₹0</span></div>
+        <div class="savings-row"><span>You saved</span><span id="savings">-₹0</span></div>
+        <div class="cart-total"><strong>Total</strong><strong id="total">₹0</strong></div>
+      </div>
+      <button class="btn checkout-button" id="checkout" type="button">Continue to checkout <span aria-hidden="true">↗</span></button>
+      <p class="cart-reassurance">Your order details stay in this browser.</p>
+    </div>
+  </aside>
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+
+  <footer class="footer">
+    <a class="logo footer-logo" href="index.html">wyc<span>WEAR YOUR CHOICE</span></a>
+    <p>Everyday pieces. Your kind of style.</p>
+    <span>© 2026 WYC</span>
+  </footer>
+
+  <script src="auth.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 # WYC — Wear Your Choice
 
-A simple clothing storefront built with HTML, CSS, and vanilla JavaScript. Browse T-shirts, full-sleeve shirts, and jeans; choose a size; add products to the cart; and enter a delivery address in the demo checkout.
+A responsive clothing storefront built with HTML, CSS, and vanilla JavaScript. Browse T-shirts, shirts, and jeans; compare offer prices; choose a size; add products to the cart; and enter contact and delivery details in the demo checkout.
 
 ## Run the website
 
@@ -44,8 +44,10 @@ Each product uses:
 - Product filters for all products, T-shirts, full-sleeve shirts, and jeans
 - Multiple images per product
 - Product size selection
-- Shopping cart with item removal and total
-- Demo login/signup and delivery-address checkout
+- Sale prices, offer badges, and savings shown in the cart
+- Shopping cart with item removal, subtotal, savings, and total
+- Demo login/signup and checkout fields for name, phone, email, and delivery address
+- Responsive layout, animated product cards, and smooth drawer transitions
 
 ## Project files
 
@@ -54,7 +56,8 @@ Each product uses:
 - `style.css` — shared layout and visual styles
 - `app.js` — product data, image galleries, filters, cart, and checkout behavior
 - `auth.js` — demo authentication behavior
+- `README.md` — setup and project notes
 
 ## Demo limitations
 
-This is a front-end demonstration. Cart items, accounts, and sessions are stored in the browser's local storage. Checkout displays a confirmation but does not send an order or delivery address to a server, accept payment, or arrange shipping. Do not use real passwords.
+This is a front-end demonstration. Cart items, accounts, and sessions are stored in the browser's local storage. Checkout displays a confirmation but does not send contact or delivery details to a server, accept payment, or arrange shipping. The offer/compare-at prices are sample storefront data and should be checked and updated before publishing. Do not use real passwords.
